@@ -1,0 +1,49 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triplet Annotation App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Triplet Annotation Task</h1>
+
+    <div class="annotator-entry">
+      <label for="annotatorName">Enter your name:</label>
+      <input type="text" id="annotatorName" placeholder="e.g., Alice">
+      <button id="startButton">Start</button>
+    </div>
+
+    <div id="annotationArea" class="hidden">
+      <p id="progress">Triplet <span id="currentIndex"></span> of <span id="totalTriplets"></span></p>
+      <div class="image-row">
+        <div class="image-block">
+          <p>Reference</p>
+          <img id="imgA" src="" alt="Reference Image">
+        </div>
+        <div class="image-block">
+          <p>Option 1</p>
+          <img id="imgB" src="" alt="Option 1">
+        </div>
+        <div class="image-block">
+          <p>Option 2</p>
+          <img id="imgC" src="" alt="Option 2">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="selectB">Option 1 is closer</button>
+        <button id="selectC">Option 2 is closer</button>
+        <button id="unsure">Not sure</button>
+        <button id="back">⬅ Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
