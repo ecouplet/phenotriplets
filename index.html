@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Triplet Annotation</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Triplet Annotation</h1>
+
+    <div class="annotator-entry">
+      <label for="annotatorName">Enter annotator name</label>
+      <input type="text" id="annotatorName" placeholder="e.g. Alice"/>
+      <button id="startButton">Start</button>
+    </div>
+
+    <div id="annotationArea" class="hidden">
+      <p id="progress">Triplet #<span id="currentIndex"></span></p>
+
+      <div class="image-row">
+        <div class="image-label">Option 1</div>
+        <div class="image-label">Anchor</div>
+        <div class="image-label">Option 2</div>
+
+        <div class="triplet-images">
+          <img id="imgB" src="" alt="Option 1"/>
+          <img id="imgA" src="" alt="Anchor"/>
+          <img id="imgC" src="" alt="Option 2"/>
+        </div>
+
+        <div class="choice-buttons">
+          <button id="selectB">Option 1 closer to anchor</button>
+          <button id="selectC">Option 2 closer to anchor</button>
+        </div>
+
+        <div class="unsure-container">
+          <button id="unsure">Unsure</button>
+        </div>
+      </div>
+
+      <div class="back-button-wrapper">
+        <button id="back">Back</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
